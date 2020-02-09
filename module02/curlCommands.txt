@@ -1,0 +1,14 @@
+GET get_tasks
+curl -i -H "Content-Type: application/json" -X GET http://localhost:5000/api/v1.0/tasks
+
+POST create_task
+curl -i -H "Content-Type: application/json" -X POST -d '{"title": "New Task", "description": "New description", "done": true}' http://localhost:5000/api/v1.0/tasks
+
+GET get_task
+curl -i -H "Content-Type: application/json" -X GET http://localhost:5000/api/v1.0/task/1
+
+DELETE delete_task
+curl -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/api/v1.0/tasks/2
+
+UPDATE update_task
+curl -i -H "Content-Type: application/json" -X PUT -d '{"title": "Update Task", "description": "Update description"}' http://localhost:5000/api/v1.0/tasks/1 
